@@ -39,11 +39,13 @@ Do:
 ## Tailwind
 
 Dependencies:
+
     - tailwindcss
     - postcss
     - autoprefixer
 
 Do:
+
     - install deps
     - `npx tailwindcss init -p` to create tailwind + postcss config
     - add to tailwind.config.js
