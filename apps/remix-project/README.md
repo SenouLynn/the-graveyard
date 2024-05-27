@@ -12,7 +12,14 @@ Remix meta framework with vite build tooling. Extremely opinionated but very wel
 
 ## Startup
 
+Instal deps:
+
+`pnpm i`
+
+In separate terminals:
+
 `pnpm run dev`
+
 `pnpm run serve`
 
 ## Server
