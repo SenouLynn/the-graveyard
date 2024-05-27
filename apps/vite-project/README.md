@@ -8,7 +8,7 @@
 
 Install deps:
 
-- `pnpm i `
+`pnpm i `
 
 In separate terminals:
 
