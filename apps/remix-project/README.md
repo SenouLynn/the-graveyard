@@ -31,6 +31,7 @@ Do:
     - setup terminal scripts in package.json
 
 `"dev": "remix vite:dev"`
+
 `"serve": "pnpm exec tsx server.ts"`
 
     - run serve script in separate terminal
