@@ -6,6 +6,12 @@
 
 ## Startup
 
+Install depa:
+
+- 'pnpm i'
+
+In separate terminals:
+
 `pnpm run dev`
 
 `pnpm run serve`
