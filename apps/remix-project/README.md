@@ -18,12 +18,14 @@ Remix meta framework with vite build tooling. Extremely opinionated but very wel
 ## Server
 
 Dependencies:
+
     - express
     - @types/express
     - @remix-run/express
     - cors
 
 Do:
+
     - add cors for dev purposes
     - specify port
     - setup terminal scripts in package.json
