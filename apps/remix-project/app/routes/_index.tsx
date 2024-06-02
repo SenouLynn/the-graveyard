@@ -1,6 +1,6 @@
 import type { MetaFunction } from "@remix-run/node";
 import { useEffect, useState } from "react";
-
+import { Button, FlexContainer } from "snoo-ui";
 export const meta: MetaFunction = () => {
   return [
     { title: "New Remix App" },
@@ -33,6 +33,12 @@ export default function Index() {
             Remix Docs
           </a>
         </li>
+
+        <FlexContainer>
+          <>
+            <Button />
+          </>
+        </FlexContainer>
       </ul>
     </div>
   );

@@ -1,0 +1,1 @@
+export { AppFrameTemplate } from "./AppFrameTemplate";

@@ -48,6 +48,9 @@ Dependencies:
 Do:
 
     - install deps
+    
+        `pnpm add -d tailwindcss postcss autoprefix`
+
     - `npx tailwindcss init -p` to create tailwind + postcss config
     - add to tailwind.config.js
 
