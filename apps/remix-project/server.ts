@@ -1,5 +1,14 @@
+import remix from "@remix-run/express";
+import { type ServerBuild } from "@remix-run/node";
 import cors from "cors";
 import express from "express";
+
+const viteDevServer =
+  process.env.NODE_ENV === "production"
+    ? null
+    : await import("vite").then((vite) =>
+        vite.createServer({ server: { middlewareMode: true } })
+      );
 
 const app = express();
 
@@ -14,6 +23,21 @@ app.get("/api/hello-world", (req, res) => {
   res.send({ payload: "hello world" });
 });
 
-app.listen(3001, () => {
+app.all(
+  "*",
+  remix.createRequestHandler({
+    build: viteDevServer
+      ? () =>
+          viteDevServer.ssrLoadModule(
+            "virtual:remix/server-build"
+          ) as Promise<ServerBuild>
+      : async () => {
+          const build = await import("./build/server/index.js");
+          return build as unknown as ServerBuild;
+        },
+  })
+);
+
+app.listen(3040, () => {
   console.log("App listening on http://localhost:3001");
 });
