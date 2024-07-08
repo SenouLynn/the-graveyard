@@ -20,8 +20,6 @@ In separate terminals:
 
 `pnpm run dev`
 
-`pnpm run serve`
-
 ## Server
 
 Dependencies:
